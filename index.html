@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <script>
+        // Configuración personalizada de Tailwind
         tailwind.config = {
             theme: {
                 extend: {
@@ -34,11 +35,10 @@
     </script>
     
     <style>
-        /* Utility Classes */
+        /* Utilidades de desplazamiento */
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Intersection Observer Reveal Animations */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -64,7 +64,7 @@
         .reveal-delay-2 { transition-delay: 0.4s; }
         .reveal-delay-3 { transition-delay: 0.6s; }
 
-        /* Interactive Elements & Effects */
+        /* Efectos de botones y movimiento */
         .btn-whatsapp-bloom {
             transition: box-shadow 0.3s ease-in-out;
             will-change: box-shadow;
@@ -118,7 +118,7 @@
 </head>
 <body class="font-body bg-brand-black text-brand-white antialiased selection:bg-brand-red selection:text-white overflow-x-hidden">
 
-    <!-- Hero Section -->
+    <!-- Portada principal -->
     <main class="relative w-full min-h-[100dvh] flex flex-col justify-center bg-brand-black overflow-hidden">
         
         <div class="absolute inset-0 md:left-1/3 z-0">
@@ -159,7 +159,7 @@
             </div>
         </div>
 
-        <!-- Floating Desktop CTA -->
+        <!-- Aviso para escritorio -->
         <div class="absolute bottom-12 right-6 md:right-12 z-30 hidden md:flex items-end gap-3 text-right fade-in-load animate-float" style="animation-delay: 1.5s; animation-duration: 6s;">
             <p class="text-[10px] tracking-widest font-bold w-32 uppercase text-brand-white leading-tight">
                 Inscripciones <br>
@@ -171,7 +171,7 @@
         </div>
     </main>
 
-    <!-- Carousel Section -->
+    <!-- Galería de proyectos -->
     <section class="py-20 md:py-24 bg-brand-white text-brand-black">
         <div class="container mx-auto px-6 md:px-12">
             
@@ -187,7 +187,7 @@
                 </div>
             </div>
 
-            <!-- Horizontal Scroll Container -->
+            <!-- Tarjetas desplazables -->
             <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-8 pb-8 hide-scroll">
                 <div class="snap-center shrink-0 w-[85vw] md:w-[45vw] lg:w-[30vw] aspect-[4/5] relative group bg-brand-black overflow-hidden reveal reveal-delay-1">
                     <img src="./images/carrusel-1.jpg" alt="Prototipos" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
@@ -220,7 +220,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sección de contacto -->
     <section class="bg-brand-black py-24 md:py-32 border-t border-brand-red/30">
         <div class="container mx-auto px-6 text-center max-w-4xl">
             
@@ -249,7 +249,7 @@
         <p>&copy; VEX ROBOTICS TECMILENIO PUEBLA.</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Animaciones al desplazarse -->
     <script>
         const observerOptions = {
             root: null, 
